@@ -1,0 +1,8 @@
+<!-- <span *ngIf="task.assignee"> {{task.assignee.name}} </span> -->
+
+
+<span> {{task.assignee?.name}} </span>
+
+<!-- AO INVÉS DE USAR IF E REMOVER O ELEMENTO DO DOM CASO NÃO TENHA VALOR ALGUM OBJETO COMPLEXO, 
+VOCÊ PODE SIMPLESMENTE UTILIZAR A SINTAXE DE COLOCAR PONTO DE INTERROGAÇÃO (?) PARA 
+VERIFICAR SE HÁ ALGO MAIS DENTRO DO OBJETO COMPLEXO. -->

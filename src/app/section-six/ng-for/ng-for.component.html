@@ -1,0 +1,38 @@
+
+<!-- <button (click)="onAdd()">Add</button>
+
+<ul>
+    <li *ngFor="let course of courses">
+       {{course.name}}
+       <button (click)="onRemove(course)">Remove</button>
+       <button (click)="onChange(course)">Change</button>
+    </li>
+</ul> -->
+
+<!-- Para destacar linhas pares -->
+<!-- <ul>
+    <li *ngFor="let course of courses; even as isEven">  
+        {{course.name}} <span *ngIf="isEven">(EVEN)</span>
+    </li>
+</ul> -->
+
+<!-- Lista de coisas que pode usar no for 
+index: number
+fisrt: bool
+last: bool
+even: bool - par
+odd: bool - ímpar -->
+
+
+<!-- **************** NgFor and TrackBy **************** -->
+<!-- UTILIZAMOS TRACKBY PARA FAZER COM QUE O ANGULAR NÃO RECARREGUE O TEMPO TODO A MESMA LISTA, 
+PORQUE FAZEMOS COM QUE ELE FIQUE LIGADO AO ID DO OBJETO E NÃO LOCALIZAÇÃO DA MEMÓRIA QUE ELE SE ENCONTRA, 
+ENTÃO, UTILIZAMOS PARA QUANDO TEMOS LISTAS MUITO GRANDES OU MARCAÇÕES COMPLEXAS NO NGFOR PARA 
+MELHORAR A PERFORMANCE E NÃO FICAR CARREGANDO O TEMPO TODO. -->
+
+<button (click)="loadCourses()">Load Courses</button>
+<ul>
+    <li *ngFor="let course2 of courses2; trackBy: trackCourse">
+       {{course2.name}}
+    </li>
+</ul>
